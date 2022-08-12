@@ -7,13 +7,17 @@ import {
   NavLinks,
   MobileIcon,
   Navbar,
+  DropLink,
+  DropDownContainer,
 } from "./Elements";
 import Hamburger from "hamburger-react";
-const Nav = ({ isOpen, toggle }) => {
+import logoSet1 from "assets/logoSet1.png";
+import { BiChevronDown } from "react-icons/bi";
+const Nav = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
   return (
     <NavbarContainer>
       <Navbar>
-        <NavBanner>Rn Marketing Solutions</NavBanner>
+        <NavBanner src={logoSet1} alt="logo" />
         <MobileIcon>
           <Hamburger size={25} toggled={isOpen} toggle={toggle} />
         </MobileIcon>
@@ -22,13 +26,37 @@ const Nav = ({ isOpen, toggle }) => {
             <NavLinks to="/">Home</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/home">About</NavLinks>
+            <NavLinks to="/about">About</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/home">Services</NavLinks>
+            <NavLinks to="/services">Services</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/home">FAQs</NavLinks>
+            <DropLink onClick={() => toggleDrop()}>
+              FAQs <BiChevronDown size={17} />
+            </DropLink>
+            <DropDownContainer open={dropOpen}>
+              <NavItem>
+                <NavLinks
+                  to="/home"
+                  onClick={() => {
+                    toggleDrop();
+                  }}
+                >
+                  FAQs
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="/home"
+                  onClick={() => {
+                    toggleDrop();
+                  }}
+                >
+                  Commission
+                </NavLinks>
+              </NavItem>
+            </DropDownContainer>
           </NavItem>
           <NavItem>
             <NavLinks to="/home">Complaints</NavLinks>

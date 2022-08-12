@@ -4,9 +4,11 @@ import {
   SidebarMenu,
   NavItem,
   SidebarLink,
+  DropDownContainer,
+  DropLink,
 } from "./Elements";
-
-const Sidebar = ({ isOpen, toggle }) => {
+import { BiChevronDown } from "react-icons/bi";
+const Sidebar = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
   return (
     <SidebarContainer isOpen={isOpen}>
       <SidebarMenu>
@@ -14,13 +16,39 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="/home">Home</SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/home">About</SidebarLink>
+          <SidebarLink to="/about">About</SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/home">Services</SidebarLink>
+          <SidebarLink to="/services">Services</SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/home">FAQs</SidebarLink>
+          <DropLink onClick={() => toggleDrop()}>
+            FAQs <BiChevronDown size={17} />
+          </DropLink>
+          <DropDownContainer open={dropOpen}>
+            <NavItem>
+              <SidebarLink
+                to="/home"
+                onClick={() => {
+                  toggleDrop();
+                  toggle();
+                }}
+              >
+                FAQs
+              </SidebarLink>
+            </NavItem>
+            <NavItem>
+              <SidebarLink
+                to="/home"
+                onClick={() => {
+                  toggleDrop();
+                  toggle();
+                }}
+              >
+                Commission
+              </SidebarLink>
+            </NavItem>
+          </DropDownContainer>
         </NavItem>
         <NavItem>
           <SidebarLink to="/home">Complaints</SidebarLink>

@@ -6,7 +6,6 @@ export const NavbarContainer = styled.nav`
   height: 80px;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   align-items: center;
   font-size: 1rem;
   width: 100%;
@@ -30,16 +29,13 @@ export const Navbar = styled.div`
   }
 `;
 
-export const NavBanner = styled.div`
+export const NavBanner = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.75rem;
-  color: ${(props) => props.theme.secondary};
   cursor: pointer;
-  @media screen and (max-width: 480px) {
-    font-size: 1.5rem;
-  }
+  width: auto;
+  height: 100%;
 `;
 
 export const NavMenu = styled.ul`
@@ -53,7 +49,12 @@ export const NavMenu = styled.ul`
     display: none;
   }
 `;
-export const NavItem = styled.li``;
+export const NavItem = styled.li`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const NavLinks = styled(NavLink)`
   color: ${(props) => props.theme.secondary};
@@ -71,6 +72,46 @@ export const NavLinks = styled(NavLink)`
   }
   &.active {
     color: ${(props) => props.theme.primary};
+  }
+`;
+
+export const DropLink = styled.label`
+  color: ${(props) => props.theme.secondary};
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.05s ease-in;
+  position: relative;
+  :hover {
+    color: ${(props) => props.theme.primary};
+  }
+`;
+
+export const DropDownContainer = styled.div`
+  position: absolute;
+  height: max-content;
+  width: max-content;
+  background-color: ${(props) => props.theme.tertiary};
+  padding: 1rem 1.5rem;
+  top: 120%;
+  z-index: 1;
+  border-radius: 20px;
+  padding: 1rem;
+  transition: opacity 0.3 ease !important;
+  opacity: ${(props) => (props.open ? "100%" : "0%")};
+  box-shadow: -1px 6px 10px 4px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: -1px 6px 10px 4px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: -1px 6px 10px 4px rgba(0, 0, 0, 0.32);
+  pointer-events: ${(props) => (props.open ? "all" : "none")};
+  @media screen and (max-width: 768px) {
+    top: 70%;
   }
 `;
 
@@ -106,6 +147,11 @@ export const SidebarContainer = styled.aside`
     opacity: ${({ isOpen }) => (isOpen ? "100%" : "0%")};
     top: ${({ isOpen }) => (isOpen ? "7%" : "7%")};
     transition: 0.3s ease;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: ${({ isOpen }) => (isOpen ? "70vh" : "0vh")};
+    top: ${({ isOpen }) => (isOpen ? "10%" : "7%")};
   }
 `;
 
