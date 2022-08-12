@@ -10,7 +10,7 @@ export const ServicesContainer = styled.section`
 `;
 
 export const CardsContainer = styled.div`
-  height: 50vh;
+  height: 60vh;
   width: 100vw;
   background-color: red;
   display: flex;
@@ -19,7 +19,7 @@ export const CardsContainer = styled.div`
   overflow-x: hidden;
   position: relative;
   z-index: 2;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
   background-color: ${(props) => props.theme.tertiary};
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -36,6 +36,9 @@ export const Card = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  border-radius: 24px;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 `;
 
 export const CardImage = styled.img`
@@ -47,10 +50,13 @@ export const CardImage = styled.img`
 export const CardTitle = styled.h3`
   text-align: center;
   align-self: center;
+  font-size: 1.6rem;
+  margin-top: 2vh;
 `;
 
 export const CardDescriptio = styled.p`
   text-align: center;
+  margin-top: 2vh;
 `;
 export const HeroTitle = styled.h2`
   color: ${(props) => props.theme.secondary};
