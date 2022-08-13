@@ -13,13 +13,37 @@ const Sidebar = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
     <SidebarContainer isOpen={isOpen}>
       <SidebarMenu>
         <NavItem>
-          <SidebarLink to="/home">Home</SidebarLink>
+          <SidebarLink
+            onClick={() => {
+              toggleDrop();
+              toggle();
+            }}
+            to="/home"
+          >
+            Home
+          </SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/about">About</SidebarLink>
+          <SidebarLink
+            onClick={() => {
+              toggleDrop();
+              toggle();
+            }}
+            to="/about"
+          >
+            About
+          </SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/services">Services</SidebarLink>
+          <SidebarLink
+            to="/services"
+            onClick={() => {
+              toggleDrop();
+              toggle();
+            }}
+          >
+            Services
+          </SidebarLink>
         </NavItem>
         <NavItem>
           <DropLink onClick={() => toggleDrop()}>
@@ -28,7 +52,7 @@ const Sidebar = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
           <DropDownContainer open={dropOpen}>
             <NavItem>
               <SidebarLink
-                to="/home"
+                to="/faqs"
                 onClick={() => {
                   toggleDrop();
                   toggle();
@@ -39,22 +63,38 @@ const Sidebar = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
             </NavItem>
             <NavItem>
               <SidebarLink
-                to="/home"
+                to="/comissions"
                 onClick={() => {
                   toggleDrop();
                   toggle();
                 }}
               >
-                Commission
+                Commissions
               </SidebarLink>
             </NavItem>
           </DropDownContainer>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/home">Complaints</SidebarLink>
+          <SidebarLink
+            onClick={() => {
+              toggleDrop();
+              toggle();
+            }}
+            to="/complaints-handling-procedure"
+          >
+            Complaints
+          </SidebarLink>
         </NavItem>
         <NavItem>
-          <SidebarLink to="/home">Contact Us</SidebarLink>
+          <SidebarLink
+            onClick={() => {
+              toggleDrop();
+              toggle();
+            }}
+            to="/contact"
+          >
+            Contact Us
+          </SidebarLink>
         </NavItem>
       </SidebarMenu>
     </SidebarContainer>

@@ -20,6 +20,7 @@ export const CurrentTitle = styled.h1`
   font-size: 4.5rem;
   @media screen and (max-width: 1200px) {
     font-size: calc(1.575rem + 3.9vw);
+    text-align: center;
   }
 `;
 

@@ -2,20 +2,22 @@ import styled from "styled-components";
 
 export const ServicesContainer = styled.section`
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden !important;
 `;
 
 export const CardsContainer = styled.div`
-  height: 60vh;
+  min-height: 60vh;
+  max-height: 100%;
   width: 100vw;
   background-color: red;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   overflow-x: hidden;
   position: relative;
   z-index: 2;
@@ -31,7 +33,9 @@ export const CardsContainer = styled.div`
 
 export const Card = styled.div`
   flex: 0.3;
-  height: 100%;
+  height: auto;
+  min-height: 55vh;
+  max-height: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -39,12 +43,17 @@ export const Card = styled.div`
   border-radius: 24px;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2vh;
+  }
 `;
 
 export const CardImage = styled.img`
-  flex: 0.3;
   width: 20%;
   align-self: center;
+  @media screen and (max-width: 1400px) {
+    max-width: auto;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -74,3 +83,10 @@ export const HeroTitle = styled.h2`
     font-size: 2.25rem;
   }
 `;
+
+export const Note = styled.p`
+  margin-bottom: 4vh;
+  font-weight: 600;
+`;
+
+

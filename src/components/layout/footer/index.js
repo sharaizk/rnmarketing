@@ -22,35 +22,45 @@ const Footer = () => {
         </LinksContainer>
         <LinksContainer>
           <ContainerTitle>Company</ContainerTitle>
-          <StyledLink to="/">About Us</StyledLink>
-          <StyledLink to="/">FAQs </StyledLink>
-          <StyledLink to="/">Complaint Handling</StyledLink>
-          <StyledLink to="/">FAQs</StyledLink>
+          <StyledLink to="/about">About Us</StyledLink>
+          <StyledLink to="/faqs">FAQs </StyledLink>
+          <StyledLink to="/complaints-handling-procedure">Complaint Handling</StyledLink>
         </LinksContainer>
         <LinksContainer>
           <ContainerTitle>Site Links</ContainerTitle>
           <StyledLink to="/">Home</StyledLink>
-          <StyledLink to="/">About Us</StyledLink>
-          <StyledLink to="/">Services</StyledLink>
-          <StyledLink to="/">Complaints</StyledLink>
-          <StyledLink to="/">Contact Us</StyledLink>
+          <StyledLink to="/about">About Us</StyledLink>
+          <StyledLink to="/services">Services</StyledLink>
+          <StyledLink to="/complaints-handling-procedure">Complaints</StyledLink>
+          <StyledLink to="/contact">Contact Us</StyledLink>
         </LinksContainer>
         <LinksContainer>
           <ContainerTitle>Contact Us</ContainerTitle>
           <ContactLabel>
             Address:
             <br />
-            <span>Hello</span>
+            <span>
+              Rn Marketing Solutions Ltd, 140B Queens Road, Beeston, Nottingham,
+              NG9 2FF
+            </span>
           </ContactLabel>
           <ContactLabel>
             Email:
             <br />
-            <span>Hello</span>
+            <span>
+              <a
+                href="mailto:rnmarketing.solutions96@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                rnmarketing.solutions96@gmail.com
+              </a>
+            </span>
           </ContactLabel>
           <ContactLabel>
             Phone:
             <br />
-            <span>Hello</span>
+            <span>01158883499</span>
           </ContactLabel>
         </LinksContainer>
       </SecondContainer>

@@ -13,14 +13,14 @@ const BreadCrumb = () => {
   const currentPage = route.pathname.replace("/", "");
   return (
     <BreadCrumbContainer>
-      <CurrentTitle>{currentPage}</CurrentTitle>
+      <CurrentTitle>
+        {currentPage.replace("-", " ").replace("-", " ")}
+      </CurrentTitle>
       <Crumbs>
         <StyledLink to="/">Home</StyledLink>
         <StyledText>/</StyledText>
         <StyledText>{currentPage}</StyledText>
       </Crumbs>
-
-
     </BreadCrumbContainer>
   );
 };

@@ -89,6 +89,7 @@ export const DropLink = styled.label`
   cursor: pointer;
   transition: all 0.05s ease-in;
   position: relative;
+
   :hover {
     color: ${(props) => props.theme.primary};
   }
@@ -101,6 +102,7 @@ export const DropDownContainer = styled.div`
   background-color: ${(props) => props.theme.tertiary};
   padding: 1rem 1.5rem;
   top: 120%;
+
   z-index: 1;
   border-radius: 20px;
   padding: 1rem;

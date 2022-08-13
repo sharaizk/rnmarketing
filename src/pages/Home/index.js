@@ -37,14 +37,13 @@ import logo16 from "assets/companies/logo16.png";
 
 const Home = () => {
   const description =
-    "Business Utilities Services Simplified With Only a Few Clicks. We are a group of specialists whom each brings a variety of abilities and knowledge to your business needs. Your One-Stop-Shop for business savings.";
+    "Business Services Simplified With Only a Few Clicks. We are a group of specialists whom each brings a variety of abilities and knowledge to your business needs. Your One-Stop-Shop for business savings.";
   return (
     <HomeContainer>
       <HeroContainer>
         <LeftSection>
           <HeroTitle>
-            Business Utilities Services Simplified With Only a{" "}
-            <span>Few Clicks</span>
+            Business Services Simplified With Only a <span>Few Clicks</span>
           </HeroTitle>
           <HeroDescription>{ReactHTMLParser(description)}</HeroDescription>
         </LeftSection>
@@ -101,7 +100,7 @@ const Home = () => {
             <Collaboratos>
               <ImgStyle src={logo14} $size={"10%"} alt="client logo" />
               <ImgStyle src={logo15} $size={"5%"} alt="client logo" />
-              <ImgStyle src={logo16}  $size={"10%"}alt="client logo" />
+              <ImgStyle src={logo16} $size={"10%"} alt="client logo" />
             </Collaboratos>
           </CollaboratorsContainer>
         </RightSection>

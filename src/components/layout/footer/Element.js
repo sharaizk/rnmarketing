@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   width: 100%;
-  height: 250px;
+  height: 48vh;
   padding: 2% 10%;
   display: flex;
   justify-content: center;
@@ -61,6 +61,12 @@ export const ContactLabel = styled.label`
     color: ${(props) => props.theme.tertiary};
 
     opacity: 50% !important;
+
+    & a {
+      text-decoration: none;
+      color: ${(props) => props.theme.tertiary};
+
+    }
   }
 `;
 

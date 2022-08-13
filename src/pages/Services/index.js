@@ -8,6 +8,7 @@ import {
   CardTitle,
   CardDescriptio,
   HeroTitle,
+  Note,
 } from "./Elements";
 import svg1 from "assets/svg1.svg";
 import svg2 from "assets/svg2.svg";
@@ -51,6 +52,11 @@ const Services = () => {
           </CardDescriptio>
         </Card>
       </CardsContainer>
+      <Note>
+        We may receive a commission from the supplier once the sale is completed
+        and on supply. This is built in via an uplift added to your final unit
+        price and paid to us by the supplier.
+      </Note>
     </ServicesContainer>
   );
 };

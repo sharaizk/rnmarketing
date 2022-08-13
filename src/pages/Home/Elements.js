@@ -3,11 +3,13 @@ import { NavLink } from "react-router-dom";
 import bg from "assets/bg.svg";
 export const HomeContainer = styled.section`
   height: 100%;
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  overflow-x: hidden !important;
+
 `;
 
 export const HeroContainer = styled.div`
@@ -19,6 +21,7 @@ export const HeroContainer = styled.div`
   align-items: center;
   overflow-x: hidden;
   background-color: ${(props) => props.theme.primary};
+
   @media screen and (max-width: 860px) {
     flex-direction: column;
   }

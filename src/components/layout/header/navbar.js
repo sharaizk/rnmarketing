@@ -38,7 +38,7 @@ const Nav = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
             <DropDownContainer open={dropOpen}>
               <NavItem>
                 <NavLinks
-                  to="/home"
+                  to="/faqs"
                   onClick={() => {
                     toggleDrop();
                   }}
@@ -48,21 +48,21 @@ const Nav = ({ isOpen, toggle, toggleDrop, dropOpen }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="/home"
+                  to="/comissions"
                   onClick={() => {
                     toggleDrop();
                   }}
                 >
-                  Commission
+                  Commissions
                 </NavLinks>
               </NavItem>
             </DropDownContainer>
           </NavItem>
           <NavItem>
-            <NavLinks to="/home">Complaints</NavLinks>
+            <NavLinks to="/complaints-handling-procedure">Complaints</NavLinks>
           </NavItem>
           <NavItem>
-            <NavLinks to="/home">Contact Us</NavLinks>
+            <NavLinks to="/contact">Contact Us</NavLinks>
           </NavItem>
         </NavMenu>
       </Navbar>
