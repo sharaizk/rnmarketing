@@ -87,12 +87,12 @@ const About = () => {
         >
           <HeroTitle>Business Industry Resources</HeroTitle>
           <HeroDescription>
-            We provide the most extensive and cutting-edge array of energy
-            solutions available since we have been a recognized leader in our
-            industry. Our professionals are at the forefront of identifying and
-            implementing the most recent energy management solutions. They
-            carefully assess and analyze the most affordable gas, electricity,
-            card machines and telecommunications  prices available.
+            We are a group of specialists who each offer a variety of knowledge
+            and expertise to your business. Our team at "Rn Marketing Solutions"
+            is strong, and as a result, we firmly trust in our ability to
+            deliver. With over five years of expertise, we provide objective
+            counsel to our clients to help them save money on their business
+            services.
           </HeroDescription>
         </RightSection>
       </AboutUsContainer>
